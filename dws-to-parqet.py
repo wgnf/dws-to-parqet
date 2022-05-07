@@ -19,7 +19,7 @@ def get_files_from_arguments():
     output_file = arguments.output;
 
     if not input_file.endswith('.csv') or not output_file.endswith('.csv'):
-        print('the input-file and output-file have to be a CSV-files!');
+        print('the input-file and output-file have to be CSV-files!');
         sys.exit(2);
 
     if not os.path.exists(input_file):
