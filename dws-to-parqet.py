@@ -7,7 +7,6 @@ def main():
     input_data = get_data_from_input(input_file);
     write_data_to_output(input_data, output_file);
 
-
 def get_files_from_arguments():
     argument_parser = argparse.ArgumentParser();
 
@@ -79,9 +78,6 @@ def write_data_to_output(data, output_file):
                 continue;
 
             csv_writer.writerow(['DWS', entry['currency'], entry['date'], 0, entry['isin'], entry['price'], entry['shares'], 0, type]);
-
-
-
 
 if __name__ == '__main__':
     main();
