@@ -64,6 +64,9 @@ def write_data_to_output(data, output_file):
         csv_writer.writerow(['broker', 'currency', 'date', 'fee', 'isin', 'price', 'shares', 'tax', 'type']);
 
         for entry in data:
+
+            # this basically happens when the buy-operation was scheduled but not executed yet - i do not want to have those
+            if not entry['shares']: continue;
             
             if entry['type'].startswith('Regelm. Kauf'):
                 type = 'Buy';
